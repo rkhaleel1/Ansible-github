@@ -1,0 +1,19 @@
+---
+- name: Apache HTTP Install
+  hosts: Mongo
+  become: true
+
+  tasks:
+  - name: HTTP Install
+    yum:
+      name: httpd
+      state: present
+  
+  - name: HTTP Start
+    service:
+      name: httpd
+      state: started
+      enabled: yes
+...
+      
+    
