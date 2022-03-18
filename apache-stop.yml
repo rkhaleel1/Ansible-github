@@ -11,7 +11,8 @@
         state: stopped
       name: status Apache
       service:
-        name: httpd
-        state: status
+        name: httpd status
+        tasks: 
+          - action: command "ps -ef |grep -i httpd"
 ...
     
