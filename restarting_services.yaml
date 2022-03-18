@@ -1,7 +1,7 @@
 ---
 - name: restarting multiple services
   hosts: ies007nlamngopsm
-  gather_facts: no
+  become: true
   tasks:
     - name: restarting systemd
       systemd:
