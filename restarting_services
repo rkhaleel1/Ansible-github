@@ -1,0 +1,14 @@
+---
+- name: restarting multiple services
+  hosts: ies007nlamngopsm
+  gather_facts: no
+  tasks:
+    - name: restarting systemd
+      systemd:
+        name: "{{ item }}"
+        state: restarted
+      with_items:
+        - httpd
+        - postfix
+        - rsyslog
+...
