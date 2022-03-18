@@ -4,8 +4,8 @@
   service_facts:
   register: services_state
 
-- name: Debug
-  debug:
-    var: services_state
-    name: httpd
+    - name: Debug
+      debug:
+        var: services_state
+        name: httpd
 ...
