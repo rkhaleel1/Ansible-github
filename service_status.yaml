@@ -1,5 +1,6 @@
 ---
 - name: System services status
+  hosts: all
   service_facts:
   register: services_state
 
