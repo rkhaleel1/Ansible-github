@@ -7,5 +7,5 @@
         name: "httpd"
       register: ht_service_status
 
-- debug:
-    var: ht_service_status.status.ActiveState
+     - debug:
+         var: ht_service_status.status.ActiveState
