@@ -1,0 +1,8 @@
+---
+- name: testing script
+  hosts: ies008nlamngopsm
+  user: azrkhaleel
+  tasks:
+    - name: running shell script
+      shell: /root/test.sh
+...
